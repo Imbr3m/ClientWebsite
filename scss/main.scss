@@ -1,0 +1,64 @@
+// imports
+@import "variables";
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+// Main Website
+main {
+    // Navigation
+    nav {
+        width: 100%;
+        height: 64px;
+        padding: 6px 12px;
+        background-color: $primary-color;
+
+        // display
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+        // Logo
+        .logo {
+
+            cursor: pointer;
+        }
+
+        // Nav Buttons
+        ul {
+
+            // display
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                list-style: none;
+                margin: 0 15px; //spaces between each nav button
+                
+                cursor: pointer;
+            }
+        }
+
+
+        // language and region dropdown buttons
+        .dropdown-buttons {
+
+            button {
+                cursor: pointer;
+                width: 60px;
+                height: 60px;
+
+                border: none;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+}
