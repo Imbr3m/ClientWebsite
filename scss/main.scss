@@ -43,21 +43,65 @@ main {
                 margin: 0 15px; //spaces between each nav button
                 
                 cursor: pointer;
+
+                display: inline-block;
+                position: relative;
+
+                // the dropdown stuff
+                a {
+                    display: block;
+                    padding: 20px 25px;
+                    color: blue;
+                    text-decoration: none;
+                    text-align: center;
+                }
             }
         }
 
 
         // language and region dropdown buttons
         .dropdown-buttons {
+            ul {
+                // display
+                display: flex;  
+                justify-content: end;  
+                li {
+                    list-style: none;
+                    margin: 0 15px; //spaces between each nav button
+                    
+                    cursor: pointer;
+    
+                    display: inline-block;
+                    position: relative;
+    
+                    // the dropdown stuff
+                    a {
+                        display: block;
+                        text-decoration: none;
+                        text-align: center;
+                    }:hover {
+                        background: $primary-color;
+                    }
 
-            button {
-                cursor: pointer;
-                width: 60px;
-                height: 60px;
+                    .dropdown {
+                        width: 100%;
+                        background: $primary-color;
+                        position: absolute;
+                        z-index: 999;
+                        display: none;
 
-                border: none;
-                background-color: $primary-color;
+                        li {
+                            display: block;
+                            padding: 20px 0;
+                        }
+                    }
+                }:hover {
+                    .dropdown {
+                        display: block;  
+                    }
+                }
             }
+    
         }
     }
 
