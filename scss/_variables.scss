@@ -1,8 +1,18 @@
 // Color Theme
 $primary-color: #FFC529;
+$primary-color-hover: #ecb827;
+
 $secondary-color: #FE724C;
 $font-color: #272D2F;
 $accent-color: #D7D7D7;
+$white-color: #eaeaea;
+$button-primary-color: #272D2F;
+$button-primary-color-hover: #3d4549;
+
+$line-primary-color: #272D2F;
 
 
 // Fonts
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+$font-header: "Salsa", cursive;

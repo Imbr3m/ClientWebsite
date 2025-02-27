@@ -1,10 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Salsa", cursive;
 }
 
+main {
+  height: 10000px;
+}
 main nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
   width: 100%;
   height: 64px;
   padding: 6px 12px;
@@ -51,7 +60,7 @@ main nav .dropdown-buttons ul li a {
   text-align: center;
 }
 main nav .dropdown-buttons ul li :hover {
-  background: #FFC529;
+  background: #ecb827;
 }
 main nav .dropdown-buttons ul li .dropdown {
   width: 100%;
@@ -61,9 +70,175 @@ main nav .dropdown-buttons ul li .dropdown {
   display: none;
 }
 main nav .dropdown-buttons ul li .dropdown li {
+  width: 100%;
   display: block;
   padding: 20px 0;
+  margin: 0;
+  text-align: center;
+}
+main nav .dropdown-buttons ul li .dropdown li span img {
+  width: 15px;
+  height: 15px;
 }
 main nav .dropdown-buttons ul :hover .dropdown {
   display: block;
+}
+main header {
+  width: 100%;
+  height: 100vh;
+  padding-top: 64px;
+  display: flex;
+}
+main header .text-container {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 72px;
+  gap: 25px;
+}
+main header .text-container h1 {
+  color: #FE724C;
+  font-weight: 500;
+  font-size: 4.5rem;
+  line-height: 74px;
+}
+main header .text-container p {
+  color: #FE724C;
+  font-size: 1.2rem;
+}
+main header .text-container button {
+  width: 150px;
+  height: 56px;
+  font-size: 1rem;
+  color: white;
+  background-color: #272D2F;
+  cursor: pointer;
+  border-radius: 30px;
+}
+main header .text-container button:hover {
+  background-color: #3d4549;
+}
+main header .img-container {
+  background-color: blue;
+  width: 65%;
+  height: 100%;
+}
+main .overview {
+  margin-top: 50px;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .overview .cards-container {
+  width: 85%;
+  height: 85%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 20px 40px;
+}
+main .overview .cards-container .card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 48px 32px 32px;
+  box-shadow: 0 8px 0 -6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: #eaeaea;
+}
+main .overview .cards-container .card h3 {
+  text-align: right;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 1.5rem;
+  line-height: 110%;
+}
+main .overview .cards-container .card .content {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  text-align: right;
+  flex-direction: column;
+  align-items: flex-end;
+  display: flex;
+}
+main .overview .cards-container .card .content h1 {
+  text-align: right;
+  z-index: 1;
+  color: #272D2F;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  line-height: 110%;
+  position: relative;
+}
+main .overview .cards-container .card .content .seperator {
+  background-color: #272D2F;
+  width: 100%;
+  height: 0.5px;
+}
+main .overview .cards-container .card .content p {
+  text-align: right;
+}
+main .contacts {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+}
+main .contacts .contact-container {
+  width: 80%;
+}
+main .contacts .contact-container .contact-header h1 {
+  font-size: 3rem;
+}
+main .contacts .contact-container .contact-header p {
+  margin-top: 30px;
+  font-size: 1rem;
+}
+main .contacts .contact-container .contact-entry-box {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 15px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+main .contacts .contact-container .contact-entry-box input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  background-color: #f8f8f8;
+  outline: none;
+  width: 100%;
+}
+main .contacts .contact-container .contact-entry-box button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #FFC529;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+main .contacts .contact-container .contact-entry-box button:hover {
+  background-color: #FE724C;
 }/*# sourceMappingURL=main.css.map */
