@@ -7,7 +7,10 @@
 }
 
 main {
-  height: 10000px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 100px;
 }
 main nav {
   position: fixed;
@@ -39,9 +42,13 @@ main nav ul li {
 main nav ul li a {
   display: block;
   padding: 20px 25px;
-  color: blue;
+  color: #272D2F;
   text-decoration: none;
   text-align: center;
+}
+main nav ul li a img {
+  width: 15px;
+  height: 15px;
 }
 main nav .dropdown-buttons ul {
   display: flex;
@@ -112,7 +119,7 @@ main header .text-container button {
   width: 150px;
   height: 56px;
   font-size: 1rem;
-  color: white;
+  color: #eaeaea;
   background-color: #272D2F;
   cursor: pointer;
   border-radius: 30px;
@@ -121,12 +128,11 @@ main header .text-container button:hover {
   background-color: #3d4549;
 }
 main header .img-container {
-  background-color: blue;
+  background-color: #eaeaea;
   width: 65%;
   height: 100%;
 }
 main .overview {
-  margin-top: 50px;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -136,7 +142,7 @@ main .overview {
 }
 main .overview .cards-container {
   width: 85%;
-  height: 85%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -187,6 +193,53 @@ main .overview .cards-container .card .content .seperator {
 }
 main .overview .cards-container .card .content p {
   text-align: right;
+}
+main .download {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+}
+main .download .download-container {
+  width: 80%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .download .download-container .text-section {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+}
+main .download .download-container .text-section h1 {
+  font-size: 2.75rem;
+}
+main .download .download-container .text-section p span {
+  font-weight: bold;
+}
+main .download .download-container .text-section button {
+  width: 160px;
+  height: 50px;
+  background-color: #272D2F;
+  color: #eaeaea;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+main .download .download-container .text-section button:hover {
+  background-color: #3d4549;
+  cursor: pointer;
+}
+main .download .download-container .phone-section {
+  background-color: blue;
+  width: 50%;
+  height: 100%;
 }
 main .contacts {
   width: 100%;
@@ -241,4 +294,136 @@ main .contacts .contact-container .contact-entry-box button {
 }
 main .contacts .contact-container .contact-entry-box button:hover {
   background-color: #FE724C;
+}
+
+footer {
+  width: 100%;
+  height: 45vh;
+  background-color: #FE724C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container {
+  height: 100%;
+  width: 80%;
+}
+footer .footer-container .footer-sections {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+footer .footer-container .footer-sections .footer-section-1 {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  width: 100%;
+  height: 100%;
+  border-bottom: #272D2F solid 3px;
+}
+footer .footer-container .footer-sections .footer-section-1 .logo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+footer .footer-container .footer-sections .footer-section-1 .logo img {
+  width: 35%;
+  height: auto;
+  margin: 20px 0px;
+}
+footer .footer-container .footer-sections .footer-section-1 .contact-buttons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .footer-container .footer-sections .footer-section-1 .contact-buttons div {
+  width: 100%;
+  height: 70%;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+}
+footer .footer-container .footer-sections .footer-section-1 .contact-buttons div h4 {
+  padding-bottom: 25px;
+}
+footer .footer-container .footer-sections .footer-section-1 .contact-buttons div p {
+  transition: all ease 0.5s;
+}
+footer .footer-container .footer-sections .footer-section-1 .contact-buttons div p:hover {
+  color: #eaeaea;
+  cursor: pointer;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-left: 20px;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .follow-us {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .follow-us .socials-icons {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .follow-us .socials-icons svg {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .follow-us .socials-icons :hover {
+  fill: #eaeaea;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .download-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .download-footer .download-buttons {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  width: 100%;
+}
+footer .footer-container .footer-sections .footer-section-1 .socials .download-footer .download-buttons img {
+  width: 144px;
+  height: 43px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+footer .footer-container .footer-sections .footer-section-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer-container .footer-sections .footer-section-2 .payment-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+}
+footer .footer-container .footer-sections .footer-section-2 .payment-options div {
+  width: 45px;
+  height: 30px;
+  background-color: #eaeaea;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .footer-container .footer-sections .footer-section-2 .payment-options div img {
+  width: 80%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
