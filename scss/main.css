@@ -6,9 +6,20 @@
   font-family: "Salsa", cursive;
 }
 
+body {
+  background-color: white;
+}
+
 .divide img {
   width: 100%;
   height: 100%;
+  width: 100%; /* Or specific width as needed */
+  transform-origin: right center;
+  -webkit-clip-path: inset(0 100% 0 0);
+          clip-path: inset(0 100% 0 0);
+  transition: -webkit-clip-path 0.8s ease-out;
+  transition: clip-path 0.8s ease-out;
+  transition: clip-path 0.8s ease-out, -webkit-clip-path 0.8s ease-out;
 }
 
 main {
@@ -56,6 +67,9 @@ main nav ul li a {
 main nav ul li a img {
   width: 15px;
   height: 15px;
+}
+main nav ul li:hover {
+  color: #3d4549;
 }
 main nav .dropdown-buttons {
   flex: 1;
@@ -141,6 +155,10 @@ main header .img-container {
   background-color: #eaeaea;
   width: 65%;
   height: 100%;
+  background: url("bg-imgs/miggang-vtuber.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .overview {
   height: 100vh;
@@ -158,6 +176,19 @@ main .overview .cards-container {
   grid-template-rows: repeat(2, 1fr);
   gap: 30px;
   padding: 20px 40px;
+}
+main .overview .cards-container .card-img {
+  overflow: hidden;
+}
+main .overview .cards-container .card-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
 }
 main .overview .cards-container .card {
   width: 100%;
@@ -199,7 +230,7 @@ main .overview .cards-container .card .content h1 {
   color: white;
 }
 main .overview .cards-container .card .content .seperator {
-  background-color: #272D2F;
+  background-color: white;
   width: 100%;
   height: 1px;
 }

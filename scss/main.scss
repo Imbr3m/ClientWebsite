@@ -10,6 +10,9 @@
     font-family: $font-header;
 }
 
+body {
+    background-color: white;
+}
 
 .divide {
 
@@ -17,6 +20,10 @@
         width: 100%;
         height: 100%;
 
+        width: 100%; /* Or specific width as needed */
+        transform-origin: right center; 
+        clip-path: inset(0 100% 0 0);
+        transition: clip-path 0.8s ease-out;
     }
 }
 
@@ -84,6 +91,10 @@ main {
                     text-decoration: none;
                     text-align: center;
                 }
+            }
+            li:hover {
+                color: $button-primary-color-hover;
+                
             }
         }
 
@@ -209,6 +220,10 @@ main {
             background-color: $white-color;
             width: 65%;
             height: 100%;
+            background: url('bg-imgs/miggang-vtuber.gif');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
 
 
@@ -238,6 +253,23 @@ main {
     
             gap: 30px;
             padding: 20px 40px;
+
+
+            .card-img {
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+
+                    object-fit: cover;
+                    object-position: center;
+
+                    width: 100%;
+                    height: 100%;
+    
+                }
+
+            }
     
             .card  {
                 width: 100%;
@@ -254,6 +286,14 @@ main {
                 border-radius: 4px;
     
                 background-color: $secondary-color;
+
+                // img {
+                //     width: 100%;
+                //     height: 100%;
+
+                //     object-fit: cover;
+                //     object-position: center;
+                // }
 
                 h3 {
                     text-align: right;
@@ -293,7 +333,7 @@ main {
                     }
 
                     .seperator {
-                        background-color: $line-primary-color;
+                        background-color: white;
                         width: 100%;
                         height: 1px;
                     }

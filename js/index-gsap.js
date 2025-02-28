@@ -134,7 +134,17 @@ ftl.from(".feature", {
 // features end
 
 
-
+// Wipe effect: image reveal from right to left
+gsap.to(".divide img", {
+    clipPath: "inset(0 0% 0 0)", // Reveal the image from right to left
+    scrollTrigger: {
+        trigger: ".divide",
+        start: "top 80%", // Animation starts when the section is 80% visible
+        end: "bottom 50%", // Ends before the section hits the top
+        scrub: true, // Ensures smooth animation with scroll
+        markers: true // For debugging
+    },
+});
 
 
 
@@ -142,7 +152,7 @@ ftl.from(".feature", {
 let downloadTimeline = gsap.timeline({
     scrollTrigger: {
         trigger: ".download",
-        start: "50% 80%",
+        start: "40% 80%",
         end: "bottom 50%",
         toggleActions: "play none none none",
         markers: true
