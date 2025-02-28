@@ -57,7 +57,7 @@ gsap.to(".img-container", {
 
 // Overview section
 // Overview section animation
-gsap.from(".overview .card", {
+gsap.from(".overview .card, .card-img", {
     scrollTrigger: {
         trigger: ".overview", 
         start: "top 80%", 
