@@ -27,7 +27,7 @@ main {
         position: fixed; 
         top: 0;
         left: 0;
-        z-index: 2; 
+        z-index: 20; 
 
         width: 100%;
         height: 64px;
@@ -244,7 +244,7 @@ main {
 
                 border-radius: 4px;
     
-                background-color: $white-color;
+                background-color: $secondary-color;
 
                 h3 {
                     text-align: right;
@@ -254,6 +254,8 @@ main {
                     margin-bottom: 4px;
                     font-size: 1.5rem;
                     line-height: 110%;
+
+                    color: white;
                 }
 
                 .content {
@@ -277,16 +279,20 @@ main {
                         line-height: 110%;
                         position: relative;
     
+                        color: white;
+
                     }
 
                     .seperator {
                         background-color: $line-primary-color;
                         width: 100%;
-                        height: .5px;
+                        height: 1px;
                     }
     
                     p {
                         text-align: right;
+                        color: white;
+
                     }
                 }
 
@@ -312,7 +318,7 @@ main {
         background-color: $secondary-color;
 
         .features-container {
-            background: url('features\ bg.png');
+            background: url('bg-imgs/features\ bg.png');
             background-position: center;
             background-size: 80%;
             background-repeat: no-repeat;
@@ -390,7 +396,7 @@ main {
         justify-content: center;
         align-items: center;
 
-        background-color: $white-color;
+        background-color: $secondary-color;
 
         .download-container {
 
@@ -410,6 +416,8 @@ main {
                 justify-content: center;
 
                 row-gap: 20px;
+
+                color: white;
 
                 h1 {
                     font-size: 2.75rem;
@@ -441,11 +449,30 @@ main {
                 }
             }
             .phone-section {
-                background-color: blue;
                 width: 50%;
                 height: 100%;
+                
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                position: relative;
+                
+                .back-phone {
+                    position: absolute;
+                    z-index: 1;
+                    width: 75%;
+                    height: auto;
+                    transform: scale(1.05); 
+                }
+            
+                img {
+                    z-index: 2;
+                    width: 50%;
+                    height: auto;
+                    position: relative;
+                }
             }
-
+            
         }
     }
 
@@ -460,13 +487,16 @@ main {
         align-items: center;
 
         // background could be a gif or a still image
-        background-color: whitesmoke;
+        background: url('bg-imgs/contact\ bg.png');
+        background-position: right;
+        background-size: cover;
 
         .contact-container {
             width: 80%;
             
 
             .contact-header {
+                color: white;
 
                 h1 {
                     font-size: 3rem;
@@ -484,7 +514,7 @@ main {
                 display: flex;
                 align-items: center;
                 gap: 10px;
-                background: white;
+                background: $primary-color;
                 padding: 15px;
                 border-radius: 20px;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -504,7 +534,8 @@ main {
                     display: flex;
                     align-items: center;
                     gap: 5px;
-                    background-color: $primary-color;
+                    background-color: $secondary-color;
+                    color: white;
                     border: none;
                     padding: 12px 20px;
                     border-radius: 15px;
@@ -514,7 +545,8 @@ main {
             
             
                     &:hover {
-                        background-color: $secondary-color;
+                        background-color: $primary-color;
+                        color: black;
                     }
                 }
             }
@@ -525,11 +557,14 @@ main {
 // Footer
 footer {
     
+    margin-top: 100px;
 
     width: 100%;
     height: 45vh;
 
-    background-color: $secondary-color;
+    
+
+    background-color: $primary-color;
 
     display: flex;
     justify-content: center;
