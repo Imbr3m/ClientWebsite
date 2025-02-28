@@ -25,6 +25,33 @@ tl.from(".img-container", {
     ease: "power2.inOut",
     delay: '-0.75',
 })
+
+
+// Text container moves to the left
+gsap.to(".text-container", {
+    x: -200, // Adjust the amount to your preference
+    scrollTrigger: {
+        trigger: ".text-container",
+        start: "90% 80%", 
+        end: "bottom top",
+        scrub: true, // This will make the animation smooth as you scroll
+        markers: true
+    }
+});
+
+// Img container moves to the right
+gsap.to(".img-container", {
+    x: 200, // Adjust the amount to your preference
+    scrollTrigger: {
+        trigger: ".img-container",
+        start: "90% 80%", 
+        end: "bottom top",
+        scrub: true, // This will make the animation smooth as you scroll
+        markers: true
+    }
+});
+
+
 // Landing page end
 
 
